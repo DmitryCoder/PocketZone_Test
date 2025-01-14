@@ -184,7 +184,9 @@ public class InventoryManager : MonoBehaviour
     public void ItemRemove_ShowConfirmationWindow(string itemId)
     {
         GameObject window = Instantiate(prefabRemoveConfirmation, mainCanvas.transform);
-        window.transform.GetChild(0).GetComponent<Image>().sprite = activeItems[itemId].image;
+        Image img=window.transform.GetChild(0).GetComponent<Image>();
+        img.sprite = activeItems[itemId].image;
+        img.SetNativeSize();
         itemToDelete = itemId;
     }
 
