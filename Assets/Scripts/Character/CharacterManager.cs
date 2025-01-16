@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class CharacterManager : MonoBehaviour
 {
     public VariableJoystick variableJoystick;
     private Rigidbody2D rb;
@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour
     public int healthCurrent = 10;
     private Vector2 movement;
     public RectTransform healthbar;
-    public static CharacterController instance;
+    public static CharacterManager instance;
     [NonSerialized]public int nearestEnemyId = 0;
     public Dictionary<int, EnemyManager.EnemyInRange> enemiesInRange = new Dictionary<int, EnemyManager.EnemyInRange>();
     private void Start()

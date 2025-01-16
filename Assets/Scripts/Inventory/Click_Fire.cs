@@ -15,7 +15,7 @@ public class Click_Fire : MonoBehaviour
 
         if(!InventoryManager.instance.CurrentAmmoFired(1)) return; //нет патронов
         audioSource.Play();
-        CharacterController.instance.ShootNearestEnemy(1);
+        CharacterManager.instance.ShootNearestEnemy(1);
         InventoryManager.instance.InventoryValues_RefreshUI();
     }
 }

@@ -645,9 +645,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 486951711}
-  - component: {fileID: 486951710}
   - component: {fileID: 486951712}
   - component: {fileID: 486951713}
+  - component: {fileID: 486951714}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -655,23 +655,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &486951710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486951709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c7fbf6e979d4e4cb42db9807b38511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  variableJoystick: {fileID: 2042919743}
-  speed: 3
-  healthMax: 10
-  healthCurrent: 10
-  healthbar: {fileID: 1225310659}
 --- !u!4 &486951711
 Transform:
   m_ObjectHideFlags: 0
@@ -708,7 +691,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 100
-  m_LinearDrag: 0
+  m_LinearDrag: 500
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -742,6 +725,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28547007, y: 0.6752136}
   m_EdgeRadius: 0
+--- !u!114 &486951714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486951709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c7fbf6e979d4e4cb42db9807b38511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableJoystick: {fileID: 2042919743}
+  speed: 3
+  healthMax: 10
+  healthCurrent: 10
+  healthbar: {fileID: 1225310659}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -15528,6 +15528,7 @@ MonoBehaviour:
   spawnEnemies: 0
   spawnPlayer: 0
   respawnInventory: 0
+  loadInventory: 0
 --- !u!4 &2077078136
 Transform:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class Enemy_HitPlayer : MonoBehaviour
     {
         if (!inCoolDown && other.tag == "Player")
         {
-            CharacterController.instance.healthCurrent -= enemy.damageByHit;
+            CharacterManager.instance.healthCurrent -= enemy.damageByHit;
             StartCoolDown();
         }
     }
@@ -19,7 +19,7 @@ public class Enemy_HitPlayer : MonoBehaviour
     {
         if (!inCoolDown && other.tag == "Player")
         {
-            CharacterController.instance.healthCurrent -= enemy.damageByHit;
+            CharacterManager.instance.healthCurrent -= enemy.damageByHit;
             StartCoolDown();
         }
     }

@@ -19,7 +19,7 @@ public class EnemyObject : MonoBehaviour
     private void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        player = CharacterController.instance.gameObject;
+        player = CharacterManager.instance.gameObject;
     }
 
     private void FixedUpdate()
@@ -44,10 +44,10 @@ public class EnemyObject : MonoBehaviour
         if (healthCurrent > 0) return;
         Vector3 coords = gameObject.transform.position;
         int myId = gameObject.GetInstanceID();
-        if (CharacterController.instance.enemiesInRange.ContainsKey(myId))
-            CharacterController.instance.enemiesInRange.Remove(myId);
+        if (CharacterManager.instance.enemiesInRange.ContainsKey(myId))
+            CharacterManager.instance.enemiesInRange.Remove(myId);
 
-        if (CharacterController.instance.nearestEnemyId == myId) CharacterController.instance.nearestEnemyId = 0;
+        if (CharacterManager.instance.nearestEnemyId == myId) CharacterManager.instance.nearestEnemyId = 0;
         
         DataManager.instance.RemoveEnemyState(gameObject.GetInstanceID());
         Destroy(gameObject);
